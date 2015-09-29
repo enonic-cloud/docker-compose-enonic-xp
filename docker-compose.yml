@@ -1,0 +1,19 @@
+apache2:
+  build: apache2
+  hostname: navlab-test.customer.enonic.io
+  restart: always
+  ports:
+    - "80:80"
+  links:
+    - exp
+exp:
+  build: exp
+  restart: always
+  ports:
+    - "8080:8080"
+  volumes_from:
+    - "storage"
+storage:
+  build: storage
+  labels:
+    - "io.enonic.management.dobackup"
