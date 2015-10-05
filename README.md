@@ -15,6 +15,12 @@ To configure the Instance automaticly, use the configure.sh script and replace "
 
 Edit the `exp/config/com.enonic.xp.web.vhost.cfg` and modify the `mapping.site.target` to point to your application.
 
+Get rid of existing git files and initial config script.
+````
+rm -rf .git configure.sh
+````
+
+
 Now, build the container set with docker-compose
 ```
 docker-compose build 
