@@ -1,4 +1,4 @@
-FROM enonic/xp-app:6.0.0
+FROM enonic/xp-app:6.2.0
 
 USER root
 
