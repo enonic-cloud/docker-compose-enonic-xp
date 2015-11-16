@@ -1,5 +1,8 @@
 FROM enonic/xp-app:6.2.0
 
+# Set Memory settings
+ENV JAVA_OPTS "-Xms1024M -Xmx2048M"
+
 USER root
 
 RUN cp -r $XP_ROOT/home.org $XP_ROOT/home
