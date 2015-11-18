@@ -19,14 +19,14 @@ echo "##########################################################################
 echo "### Creating apache2 config for $INSTANCE_HOSTNAME"
 
 cp $APACHE2_VHOST_TEMPLATE apache2/sites/$INSTANCE_HOSTNAME.conf
-sed -i ".tmp" -e "s/SITE_HOSTNAME_ESCAPED/$(echo $INSTANCE_HOSTNAME | sed 's/\./\\\\./g')/g" apache2/sites/$INSTANCE_HOSTNAME.conf
-sed -i ".tmp" -e "s/SITE_HOSTNAME/$INSTANCE_HOSTNAME/g" apache2/sites/$INSTANCE_HOSTNAME.conf
+sed -i".tmp" -e "s/SITE_HOSTNAME_ESCAPED/$(echo $INSTANCE_HOSTNAME | sed 's/\./\\\\./g')/g" apache2/sites/$INSTANCE_HOSTNAME.conf
+sed -i".tmp" -e "s/SITE_HOSTNAME/$INSTANCE_HOSTNAME/g" apache2/sites/$INSTANCE_HOSTNAME.conf
 rm apache2/sites/$INSTANCE_HOSTNAME.conf.tmp
 
 echo "###############################################################################"
 echo "### Adding $INSTANCE_HOSTNAME to Enonic XP vhosts"
 
-sed -i ".tmp" -e "s/SITE_HOSTNAME/$INSTANCE_HOSTNAME/g" $EXP_VHOST_FILE
+sed -i".tmp" -e "s/SITE_HOSTNAME/$INSTANCE_HOSTNAME/g" $EXP_VHOST_FILE
 
 echo "###############################################################################"
 echo "### Ready to build and deploy with docker-compose"
