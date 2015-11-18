@@ -15,3 +15,7 @@ exp:
     - "storage"
 storage:
   build: storage
+mail:
+  image: enoniccloud/postfix
+  hostname: SITE_HOSTNAME
+  restart: always
