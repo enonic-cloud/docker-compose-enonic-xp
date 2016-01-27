@@ -87,6 +87,5 @@ Sometimes an upgrade requires a toolbox dump and load to fix some changes i the 
 
 
 # Usefull links
-
 - Using Docker-compose in production: https://docs.docker.com/compose/production/
-- 
+
