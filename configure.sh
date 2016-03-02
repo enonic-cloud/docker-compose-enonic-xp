@@ -32,7 +32,7 @@ rm $EXP_VHOST_FILE.tmp
 echo "###############################################################################"
 echo "### Adding $INSTANCE_HOSTNAME to docker-compose.yml"
 
-sed -i ".tmp" -e "s/SITE_HOSTNAME/$INSTANCE_HOSTNAME/g" docker-compose.yml
+sed -i".tmp" -e "s/SITE_HOSTNAME/$INSTANCE_HOSTNAME/g" docker-compose.yml
 rm docker-compose.yml.tmp
 
 echo "###############################################################################"
