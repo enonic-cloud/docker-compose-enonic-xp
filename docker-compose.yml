@@ -13,6 +13,9 @@ exp:
     - "8080:8080"
   volumes_from:
     - "storage"
+  labels:
+    io.enonic.backup.prescripts: "/usr/local/bin/backup.sh $user$ $password$"
+    io.enonic.backup.data: "/enonic-xp/home/snapshots,/enonic-xp/home/repo"
 storage:
   build: storage
 mail:

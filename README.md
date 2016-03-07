@@ -85,7 +85,6 @@ Sometimes an upgrade requires a toolbox dump and load to fix some changes i the 
 - Start up a clean Installation with the command `docker-compose up -d`.
 - Import you old installation with toolbox load command above.
 
-
 # Usefull links
 - Using Docker-compose in production: https://docs.docker.com/compose/production/
 

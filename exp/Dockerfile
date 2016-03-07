@@ -23,6 +23,9 @@ COPY deploy/* $XP_ROOT/home/deploy/
 
 COPY config/* $XP_ROOT/home/config/
 
+COPY backup.sh /usr/local/bin/backup.sh
+RUN chmod +x /usr/local/bin/backup.sh
+
 RUN mkdir $XP_ROOT/home/repo
 RUN chown enonic-xp -R $XP_ROOT/home
 
