@@ -14,7 +14,7 @@ exp:
   volumes_from:
     - "storage"
   labels:
-    io.enonic.backup.prescripts: "/usr/local/bin/backup.sh $user$ $password$"
+    io.enonic.backup.prescripts: "/usr/local/bin/backup.sh $ec_backup_user $ec_backup_password"
     io.enonic.backup.data: "/enonic-xp/home/snapshots,/enonic-xp/home/repo"
 storage:
   build: storage
