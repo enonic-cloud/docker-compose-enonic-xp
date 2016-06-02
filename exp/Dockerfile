@@ -1,4 +1,4 @@
-FROM enonic/xp-app:6.3.0
+FROM enonic/xp-app:6.5.4
 
 # Set Memory settings
 ENV JAVA_OPTS "-Xms1024M -Xmx2048M"
