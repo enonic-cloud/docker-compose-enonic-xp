@@ -1,7 +1,8 @@
 FROM enonic/xp-app:6.6.0
 
 # Set Memory settings
-ENV JAVA_OPTS "-Xms1024M -Xmx2048M"
+# Defaults to 1/4 of servers physical mem
+#ENV JAVA_OPTS "-Xms1024M -Xmx2048M"
 
 USER root
 
