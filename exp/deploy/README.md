@@ -4,7 +4,7 @@ This file is great for documenting Enonic XP applications deployed to this insta
 ## Superhero
 
 ### Installation
-Installed trough repo.enonic.com in the Dockerfile
+Installed through repo.enonic.com in the Dockerfile
 
 ### Configuration
 No configuration needed.
