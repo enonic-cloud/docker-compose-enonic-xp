@@ -2,6 +2,7 @@
 USER=$1
 PASSWORD=$2
 
+JAVA_OPTS="-Xms16M -Xmx64M"
 
 #BEFORE_DATE=$(date -Is)
 BEFORE_DATE=$(date +%FT%TZ)
