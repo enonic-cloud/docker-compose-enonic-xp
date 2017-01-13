@@ -1,4 +1,4 @@
-FROM enonicio/apache2
+FROM enoniccloud/apache2
 
 COPY var-www-html /var/www/html
 COPY sites /etc/apache2/sites-enabled
