@@ -4,6 +4,10 @@ apache2:
   restart: always
   ports:
     - "80:80"
+  log_driver: "json-file"
+  log_opt:
+    max-size: "300M"
+    max-file: "1"
   links:
     - exp
 exp:
@@ -13,6 +17,10 @@ exp:
     - "8080:8080"
   volumes_from:
     - "storage"
+  log_driver: "json-file"
+  log_opt:
+    max-size: "300M"
+    max-file "1"
   links:
     - mail
   labels:
