@@ -20,7 +20,7 @@ exp:
   log_driver: "json-file"
   log_opt:
     max-size: "300M"
-    max-file "1"
+    max-file: "1"
   links:
     - mail
   labels:
