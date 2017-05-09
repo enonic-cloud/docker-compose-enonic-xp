@@ -2,7 +2,12 @@ FROM enonic/xp-app:6.9.4
 
 # Set Memory settings
 # Defaults to 1/4 of servers physical mem
-#ENV JAVA_OPTS "-Xms1024M -Xmx2048M"
+# On single cpu
+# ENV JAVA_OPTS "-Xms2G -Xmx2G"
+# On multi cpu systems
+# ENV JAVA_OPTS "-Xms5G -Xmx5G -Djsse.enableSNIExtension=true -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=60 -XX:+ScavengeBeforeFullGC -XX:+CMSScavengeBeforeRemark"
+# Dump memory to heapdum file on outofmem
+JAVA_OPTS="$JAVA_OPTS -XX:-HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/heapdump.hprof"
 
 USER root
 
