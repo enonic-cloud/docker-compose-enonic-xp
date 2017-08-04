@@ -1,4 +1,4 @@
-FROM enonic/xp-app:6.10.3
+FROM enonic/xp-app:6.11.0
 
 # Set Memory settings
 # Defaults to 1/4 of servers physical mem
