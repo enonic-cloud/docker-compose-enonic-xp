@@ -4,6 +4,7 @@ apache2:
   restart: always
   ports:
     - "80:80"
+    - "8001:8001"
   log_driver: "json-file"
   log_opt:
     max-size: "300M"
