@@ -38,8 +38,6 @@ $ docker-compose up -d
 To redeploy changes to in the Enonic XP installation, just redeploy the affected containers ( and **not the storage** container ).
 ```
 $ docker-compose build exp apache2
-$ docker-compose stop exp apache2
-$ docker-compose rm exp apache2
 $ docker-compose up --no-deps -d exp apache2
 ```
 

@@ -26,7 +26,7 @@ exp:
   links:
     - mail
   labels:
-    io.enonic.backup.prescripts: "/usr/local/bin/backup.sh su password"
+    io.enonic.backup.prescripts: "/usr/local/bin/backup.sh"
     io.enonic.backup.data: "/enonic-xp/home/snapshots,/enonic-xp/home/repo"
 storage:
   build: storage

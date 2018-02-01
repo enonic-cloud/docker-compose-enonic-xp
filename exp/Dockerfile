@@ -1,5 +1,6 @@
 FROM enonic/xp-app:6.13.1
 
+ENV SNAPSHOTTER_VERSION 1.0.5
 # Set Memory settings
 # Defaults to 1/4 of servers physical mem
 # On single cpu
@@ -23,8 +24,8 @@ COPY deploy/* $XP_ROOT/home/deploy/
 # Or download it from an alternative source on the net.
 #ENV SUPERHERO_VERSION 1.0.0
 #RUN wget -O $XP_ROOT/home/deploy/superhero-$SUPERHERO_VERSION.jar http://repo.enonic.com/public/com/enonic/app/superhero/$SUPERHERO_VERSION/superhero-$SUPERHERO_VERSION.jar
-
-
+RUN wget -O $XP_ROOT/home/deploy/snapshotter-$SNAPSHOTTER_VERSION.jar http://repo.enonic.com/public/com/enonic/app/snapshotter/$SNAPSHOTTER_VERSION/snapshotter-$SNAPSHOTTER_VERSION.jar
+RUN mkdir -p /enonic-xp/home/snapshots && chown $XP_USER /enonic-xp/home/snapshots
 ###############################################################################
 
 COPY config/* $XP_ROOT/home/config/
