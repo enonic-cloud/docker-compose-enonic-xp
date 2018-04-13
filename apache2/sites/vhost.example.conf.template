@@ -8,19 +8,17 @@
   ProxyRequests Off
   ProxyPreserveHost On
 
-  ProxyPass /admin/event ws://exp:8080/admin/event
-  ProxyPassReverse /admin/event ws://exp:8080/admin/event
   ProxyPass / http://exp:8080/
   ProxyPassReverse / http://exp:8080/
 
+  RewriteEngine on
+  
   RewriteCond %{HTTP:Upgrade} =websocket [NC]
   RewriteCond %{REQUEST_URI} /admin [NC]
   RewriteRule /admin/(.*) ws://exp:8080/admin/$1 [P,L]
 
-  RewriteEngine on
   RewriteCond %{HTTP_HOST} !^SITE_HOSTNAME_ESCAPED$
   RewriteCond %{HTTP_HOST} !^$
   RewriteRule ^/(.*) http://SITE_HOSTNAME/$1 [L,R]
 
 </VirtualHost>
-
