@@ -1,7 +1,7 @@
 FROM enoniccloud/apache2
 
-RUN rm /etc/apache2/sites-enabled/000-default.conf
-RUN rm /etc/apache2/sites-enabled/default-ssl.conf
+RUN rm /etc/apache2/sites-enabled/000-default.conf \
+  && rm /etc/apache2/sites-enabled/default-ssl.conf
 
 COPY var-www-html /var/www/html
 
